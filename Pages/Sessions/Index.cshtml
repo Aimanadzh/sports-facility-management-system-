@@ -1,0 +1,36 @@
+@page
+@model FacilityApp.Pages.Sessions.IndexModel
+
+<h1>Sessions</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class</th>
+            <th>Instructor</th>
+            <th>Room</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Capacity</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Sessions)
+{
+        <tr>
+            <td>@item.ClassType?.Name</td>
+            <td>@($"{item.Instructor?.FirstName} {item.Instructor?.LastName}")</td>
+            <td>@item.Room?.Name</td>
+            <td>@item.StartTime.ToString("g")</td>
+            <td>@item.EndTime.ToString("g")</td>
+            <td>@item.Capacity</td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

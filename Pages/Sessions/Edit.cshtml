@@ -1,0 +1,75 @@
+@page
+@model FacilityApp.Pages.Sessions.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Session</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Session.Id" />
+            <div class="form-group">
+                
+                <label asp-for="Session.ClassTypeId" class="control-label"></label>
+                <select asp-for="Session.ClassTypeId" class="form-control" asp-items="ViewBag.ClassTypeId"></select>
+                <span asp-validation-for="Session.ClassTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Session.InstructorUserId" class="control-label"></label>
+                <input asp-for="Session.InstructorUserId" class="form-control" />
+                <span asp-validation-for="Session.InstructorUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Session.RoomId" class="control-label"></label>
+                <select asp-for="Session.RoomId" class="form-control" asp-items="ViewBag.RoomId"></select>
+                <span asp-validation-for="Session.RoomId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Session.StartTime" class="control-label"></label>
+                <input asp-for="Session.StartTime" class="form-control" />
+                <span asp-validation-for="Session.StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Session.EndTime" class="control-label"></label>
+                <input asp-for="Session.EndTime" class="form-control" />
+                <span asp-validation-for="Session.EndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Session.Capacity" class="control-label"></label>
+                <input asp-for="Session.Capacity" class="form-control" />
+                <span asp-validation-for="Session.Capacity" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Session.IsLocked" /> @Html.DisplayNameFor(model => model.Session.IsLocked)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Session.IsCancelled" /> @Html.DisplayNameFor(model => model.Session.IsCancelled)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+

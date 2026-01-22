@@ -1,0 +1,16 @@
+# Build outputs
+bin/
+obj/
+
+# Visual Studio / IDE settings
+.vs/
+.idea/
+*.user
+*.suo
+
+# OS files
+.DS_Store
+
+# Secrets
+appsettings.json
+appsettings.*.json
