@@ -68,3 +68,14 @@ This system centralizes all facility operations into a single platform with:
 3. Configure MySQL connection
 4. Run migrations
 5. Start the application
+
+## Screenshots
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+### Session Management
+![Sessions List](screenshots/sessions-list.png)
+
+### Create Session
+![Create Session](screenshots/create-session.png)
