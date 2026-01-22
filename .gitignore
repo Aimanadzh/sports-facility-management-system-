@@ -11,6 +11,9 @@ obj/
 # OS files
 .DS_Store
 
-# Secrets
+# ASP.NET / logs
+*.log
+
+# Secrets (do not commit)
 appsettings.json
 appsettings.*.json
