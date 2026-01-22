@@ -1,89 +1,173 @@
-PM Case Study- Sports Facility Management System
-Context: 
-Many small and mid-sized sports facilities (gyms, studios, training centers) operate with fragmented processes for managing sessions, instructors, and participants. Scheduling is often handled via spreadsheets, messaging apps, or manual coordination, which leads to:
-Conflicting schedules
-Poor visibility into session availability
-Manual, error-prone booking processes
-Lack of accountability across roles
-This project addresses a real operational problem: how to give facilities a single, structured system to manage sessions and bookings clearly, reliably, and at scale.
-Product Purpose:
-The product is designed to centralize session management and bookings, while clearly separating responsibilities between different user roles.
-The core idea: Each user sees only what they need, can perform only the actions relevant to them, and understands exactly what’s happening in the system.
-Users & What They Can Do 
-1. Admin (Facility Owner / Manager)
-Purpose: Full operational control and system oversight.
-Main capabilities:
-Create, edit, and delete sports sessions
-Assign rooms, instructors, and time slots
-Manage system-wide data (rooms, session types, skills)
-View all bookings and participant lists
-Access an admin dashboard with a full overview
-Why this matters:
-Admins need accuracy, visibility, and control. The system ensures they can configure everything without relying on staff or manual coordination.
+# PM Case Study  
+## Sports Facility Management System
 
-2. Staff (Instructors)
-Purpose: Execute and manage daily operations.
-Main capabilities:
-View assigned sessions
-See participant lists per session
-Access a staff-specific dashboard
-Monitor session schedules without editing system-wide settings
-Why this matters:
-Staff need clarity, not complexity. They don’t create system structure, they operate within it. The interface removes unnecessary options to prevent mistakes.
+---
 
-3. Member 
-Purpose: Discover and book sessions easily.
-Main capabilities:
-Browse available sessions
-View session details (time, room, instructor, availability)
-Sign up for sessions
-Access a personal dashboard with their bookings
-Why this matters:
-Members need a simple, intuitive flow. The system removes friction by focusing only on discovery and booking, no administrative noise.
+## Context
 
+Many small and mid-sized sports facilities (gyms, studios, training centers) operate with fragmented processes for managing sessions, instructors, and participants.
 
-Core Product Functionality 
-1. Role-Based Access Control
-Each user role has:
-A dedicated dashboard
-Clear permissions
-A focused workflow
+Scheduling is often handled through spreadsheets, messaging apps, or manual coordination, which leads to:
+
+- Conflicting schedules  
+- Poor visibility into session availability  
+- Manual, error-prone booking processes  
+- Lack of accountability across roles  
+
+This project addresses a real operational problem:  
+**how to give facilities a single, structured system to manage sessions and bookings clearly, reliably, and at scale.**
+
+---
+
+## Product Purpose
+
+The product centralizes **session management and bookings**, while clearly separating responsibilities between different user roles.
+
+**Core principle:**  
+Each user sees only what they need, can perform only the actions relevant to them, and understands exactly what’s happening in the system.
+
+---
+
+## Users & Capabilities
+
+### Admin (Facility Owner / Manager)
+
+**Purpose:** Full operational control and system oversight.
+
+**Capabilities:**
+- Create, edit, and delete sports sessions  
+- Assign rooms, instructors, and time slots  
+- Manage system-wide data (rooms, session types, skills)  
+- View all bookings and participant lists  
+- Access an admin dashboard with a complete overview  
+
+**Why this matters:**  
+Admins need accuracy, visibility, and control. The system allows them to configure everything without relying on staff or manual coordination.
+
+---
+
+### Staff (Instructors)
+
+**Purpose:** Execute and manage day-to-day operations.
+
+**Capabilities:**
+- View assigned sessions  
+- See participant lists per session  
+- Access a staff-specific dashboard  
+- Monitor schedules without editing system-wide settings  
+
+**Why this matters:**  
+Staff need clarity, not complexity. They operate within a defined structure, and the interface removes unnecessary options to prevent mistakes.
+
+---
+
+### Member (Participant)
+
+**Purpose:** Discover and book sessions easily.
+
+**Capabilities:**
+- Browse available sessions  
+- View session details (time, room, instructor, availability)  
+- Sign up for sessions  
+- Access a personal dashboard with current bookings  
+
+**Why this matters:**  
+Members need a simple, intuitive flow. The system removes administrative noise and focuses only on discovery and booking.
+
+---
+
+## Core Product Functionality
+
+### 1. Role-Based Access Control
+
+- Dedicated dashboard per role  
+- Clear permissions  
+- Focused workflows  
+
 This prevents confusion and enforces operational discipline.
-2. Session Lifecycle Management
+
+---
+
+### 2. Session Lifecycle Management
+
 Sessions can be:
-Created
-Edited
-Viewed
-Deleted
+- Created  
+- Edited  
+- Viewed  
+- Deleted  
+
 Each session includes:
-Time & duration
-Room assignment
-Instructor
-Participant tracking
+- Time and duration  
+- Room assignment  
+- Instructor assignment  
+- Participant tracking  
+
 This gives facilities full control over scheduling logic.
-3. Booking & Participation Tracking
-Members can sign up for sessions
-Admins and staff can see who is attending
-The system maintains accurate participant records
+
+---
+
+### 3. Booking & Participation Tracking
+
+- Members can sign up for sessions  
+- Admins and staff can see who is attending  
+- Accurate participant records are maintained  
+
 This replaces manual attendance lists and messaging-based coordination.
-4. Structured Data Model
-The system uses a relational database design to maintain clear relationships between sessions, rooms, users, and bookings. As well as data integrity and scalability
+
+---
+
+### 4. Structured Data Model
+
+The system uses a relational database design to maintain:
+
+- Clear relationships between sessions, rooms, users, and bookings  
+- Data integrity and scalability  
+
 This makes future features (analytics, capacity planning, notifications) easy to add.
 
-Key Product Decisions (Real PM Thinking)
-Decision 1: Strong Role Separation
-Instead of one “do-everything” interface, I designed three distinct experiences. 
-Result: Fewer errors, faster onboarding and clear accountability
+---
 
-Decision 2: Feature Focus Over Feature Count
-I intentionally did not include: Payments, notifications and a mobile app. This allowed focus on core operational value: scheduling + bookings.
+## Key Product Decisions
 
-Decision 3: Maintainability First
+### Decision 1: Strong Role Separation
+
+Instead of a single “do-everything” interface, the product provides **three distinct user experiences** aligned with real responsibilities.
+
+**Result:**
+- Fewer errors  
+- Faster onboarding  
+- Clear accountability  
+
+---
+
+### Decision 2: Feature Focus Over Feature Count
+
+Intentionally excluded:
+- Payments  
+- Notifications  
+- Mobile application support  
+
+This kept the product focused on **core operational value**: scheduling and bookings.
+
+---
+
+### Decision 3: Maintainability First
+
 The product prioritizes:
-Clear architecture
-Predictable workflows
-Easy extensibility
-This ensures long-term usability, not short-term feature overload.
+- Clear architecture  
+- Predictable workflows  
+- Easy extensibility  
 
+This ensures long-term usability rather than short-term feature overload.
 
+---
 
+## PM Takeaway
+
+This project demonstrates my ability to:
+
+- Identify real operational problems  
+- Translate them into structured product scope  
+- Design role-based experiences  
+- Make deliberate trade-offs between value and complexity  
+- Own a product from problem definition to delivery
